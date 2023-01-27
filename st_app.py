@@ -2,13 +2,18 @@ import streamlit as st
 
 from views import Pages
 
+st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 list_of_pages = [
     "Dashboard",
     "Observations",
     "Insights",
 ]
+
+st.sidebar.header('Iñigo Jose G. Franco')
 
 st.sidebar.title(':scroll: Coffee Consumption Behavior of Consumers')
 
